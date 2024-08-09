@@ -10,14 +10,13 @@ const Search = () => {
   const { setSelectedLocation } = useContext(LocationContext);
 
   const doSearch = useDebounce((term) => {
-    console.log(term);
     const fetchedLocation = getLocationByName(term);
-    console.log(fetchedLocation);
+
     setSelectedLocation({ ...fetchedLocation });
   }, 500);
 
   const handleChange = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     const value = e.target.value;
     setSearchTerm(value);
     doSearch(value);
@@ -33,7 +32,7 @@ const Search = () => {
           onChange={handleChange}
           required
         />
-        <button type='submit'>
+        <button type='button'>
           <img src={search} />
         </button>
       </div>
