@@ -4,34 +4,30 @@ const data = [
     latitude: 51.5073219,
     longitude: -0.1276474,
   },
+
   {
-    location: 'Kolkata',
-    latitude: 22.5726723,
-    longitude: 88.3638815,
-  },
-  {
-    location: 'Dhaka',
-    latitude: 23.777176,
-    longitude: 90.399452,
-  },
-  {
-    location: 'New York',
+    location: 'Singapore',
     latitude: 1.2899175,
     longitude: 103.8519072,
   },
   {
     location: 'Dhaka',
-    latitude: 40.7127281,
-    longitude: -74.0060152,
+    latitude: 23.810331,
+    longitude: 90.412521,
   },
   {
     location: 'Toronto',
     latitude: 43.6534817,
     longitude: -79.3839347,
   },
+  {
+    location: 'Khulna',
+    latitude: 22.82,
+    longitude: 89.550003,
+  },
 ];
 
-function getLocation() {
+function getLocations() {
   return data;
 }
 
@@ -50,3 +46,5 @@ function getLocationByName(location) {
     return defaultLocation;
   }
 }
+
+export { getLocationByName, getLocations };
